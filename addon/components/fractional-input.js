@@ -13,7 +13,7 @@ export default Component.extend({
   actions: {
     blurred() {
       if (this.get("on-blur")) {
-        this.get("on-blur")()
+        this.get("on-blur")(this.value)
       }
     }
   },
@@ -28,6 +28,7 @@ export default Component.extend({
     }
     return result;
   }),
+
 
   valueWhole: computed({
     get() {
